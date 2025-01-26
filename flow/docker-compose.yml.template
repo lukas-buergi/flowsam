@@ -1,0 +1,9 @@
+services:
+  raft:
+    build: ./container
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ABSINPUT:/input/INFILE
+      - ABSOUTPUT:/output
